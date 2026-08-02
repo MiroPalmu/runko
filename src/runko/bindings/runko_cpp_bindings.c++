@@ -18,6 +18,10 @@ PYBIND11_MODULE(runko_cpp_bindings, m_base) {
   // in order for python to know about corgi base classes.
   std::ignore = py::module::import("pycorgi");
 
+  /// simulation
+  py::module m_sim = m_base.def_submodule("simulation", "core simulation functionality");
+  simulation::bind_simulation(m_sim);
+
   /// auxiliary tools
   py::module m_tools = m_base.def_submodule("tools", "auxiliary tools");
   tools::bind_tools(m_tools);

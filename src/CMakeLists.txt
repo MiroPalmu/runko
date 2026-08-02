@@ -33,12 +33,18 @@ set (IO_FILES
      ./runko/io/snapshots/mpiio_spectra.c++
     )
 
+set (SIM_FILES
+     ./runko/bindings/pysimulation.c++
+     ./runko/simulation.c++
+    )
+
 set (RUNKO_CPP_BINDINGS_FILES
      "./runko/bindings/runko_cpp_bindings.c++"
      ${TOOLS_FILES}
      ${EMF_FILES}
      ${PIC_FILES}
      ${IO_FILES}
+     ${SIM_FILES}
     )
 
 

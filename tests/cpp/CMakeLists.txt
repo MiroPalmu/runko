@@ -3,6 +3,8 @@
 
 set(TESTS_TO_RUN
     unit_testing
+    simulation
+    simulation_cartesian_indices
 )
 
 foreach(test ${TESTS_TO_RUN})
