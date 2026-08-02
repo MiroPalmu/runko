@@ -50,7 +50,6 @@
                 "tyvi_ENABLE_IPO": "OFF",
                 "tyvi_ENABLE_CLANG_TIDY": "OFF",
                 "tyvi_ENABLE_CPPCHECK": "OFF",
-                "CMAKE_CXX_COMPILER": "hipcc",
                 "tyvi_BACKEND": "hip",
                 "OpenMP_CXX_FLAGS": "-fopenmp",
                 "OpenMP_CXX_LIB_NAMES": "",
@@ -81,10 +80,10 @@
                 "tyvi_ENABLE_IPO": "OFF",
                 "tyvi_ENABLE_CLANG_TIDY": "OFF",
                 "tyvi_ENABLE_CPPCHECK": "OFF",
-                "CMAKE_CXX_COMPILER": "hipcc",
                 "tyvi_BACKEND": "cpu",
                 "rocthrust_DIR": "$env{ROCTHRUST_INSTALL_PREFIX}/lib/cmake/rocthrust",
                 "CMAKE_CXX_FLAGS": "-O3 -march=znver3 -mtune=znver3 -funroll-loops -ffp-contract=fast -fno-math-errno"
+                "CMAKE_HIP_FLAGS": "-O3 -march=znver3 -mtune=znver3 -funroll-loops -ffp-contract=fast -fno-math-errno"
             }
         },
         {
@@ -101,6 +100,7 @@
                 "OpenMP_CXX_FLAGS": "-fopenmp",
                 "OpenMP_CXX_LIB_NAMES": "",
                 "CMAKE_CXX_FLAGS": "-O3"
+                "CMAKE_HIP_FLAGS": "-O3"
             }
         },
         {
@@ -116,7 +116,7 @@
                 "OpenMP_CXX_FLAGS": "-fopenmp",
                 "OpenMP_CXX_LIB_NAMES": "",
                 "CMAKE_CXX_FLAGS": "-O3",
-                "CMAKE_CXX_COMPILER": "hipcc",
+                "CMAKE_HIP_FLAGS": "-O3",
                 "MPI_CXX_COMPILER": "CC"
             }
         }
